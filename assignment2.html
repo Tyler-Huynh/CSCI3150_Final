@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Assignment 2</title>
+	<link rel="stylesheet" type="text/css" href="css/about2.css">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="js/lab3.js"></script>
+
+</head>
+<body class="assignment2-page" onload="labLogin()">
+	<h1 class="body-title">Assignment 2</h1>
+	<!----hero Section start---->
+	<header class="header">
+		<section class="hero">
+			<h1 style="display: none;">nav</h1>
+			<nav>
+				<h2 class="logo">Universal Portfolio</h2>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="assignment1.html">Assignment 1</a></li>
+					<li><a href="assignment2.html">Assignment 2</a></li>
+					<li><a href="assignment3.html">Assignment 3</a></li>
+				</ul>
+			</nav>
+		</section>
+	</header>
+		<h1>Table and Form</h1>
+		<div class="anchor">
+			<a href="#main-content" style="margin-left: 266px;">Skip to Main Content</a>
+		</div>
+	<main id="main-content">
+		<section class="main-content">
+			<h1 style="display: none;">main-content</h1>
+			<div class="main">
+				<table style="border: 1px;">
+					<caption id="recently-played">Recently Played Games</caption>
+					<thead>
+						<tr>
+							<th scope="col">Game</th>
+							<th scope="col">Developer</th>
+							<th scope="col">Last Played</th>
+							<th scope="col">Total Time Played</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">Grand Theft Auto 5</th>
+							<td>Rockstar Games</td>
+							<td>69 Hrs</td>
+							<td>1825 Hrs</td>
+						</tr>
+						<tr>
+							<th scope="row">Cyberpunk 2077</th>
+							<td>CD Projekt Red</td>
+							<td>10 Hrs</td>
+							<td>217 Hrs</td>
+						</tr>
+						<tr>
+							<th scope="row">The Sims 4</th>
+							<td>Maxis</td>
+							<td>3 Hrs</td>
+							<td>45 Hrs</td>
+						</tr>
+						<tr>
+							<th scope="row">Minecraft</th>
+							<td>Mojang</td>
+							<td>89 Hrs</td>
+							<td>3456 Hrs</td>
+						</tr>
+						<tr>
+							<th scope="row">Wii Sports</th>
+							<td>Nintendo</td>
+							<td>178 Hrs</td>
+							<td>234 Hrs</td>
+						</tr>
+						<tr>
+							<th scope="row">Super Mario Bros</th>
+							<td>Nintendo</td>
+							<td>8 Hrs</td>
+							<td>106 Hrs</td>
+						</tr>
+						<tr>
+							<th scope="row">Call of Duty</th>
+							<td>Multiple Developers</td>
+							<td>12 Hrs</td>
+							<td>60 Hrs</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+		<section class="main-form">
+			<h1 style="display: none;">main-form</h1>
+			<div class="main-form">
+				<form id="myform" method="post" style="margin-top: 15px; margin-right:auto; margin-left: auto; width: 600px;">
+					<fieldset style="border: 0px;">
+						<legend style="margin-bottom: 10px;">Give us your information!</legend>
+						<div class="form-group">
+						<label>
+						First Name
+							<input
+								type="text"
+								class="form-control"
+								name="firstName"
+								id="firstName"
+								placeholder="First Name"
+								required
+								style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 68px;"
+							/>
+						</label>
+						</div>
+						<div class="form-group">
+						<label>
+						Last Name
+							<input
+								type="text"
+								id="lastName"
+								class="form-control"
+								name="lastName"
+								placeholder="Last Name"
+								required="required"
+								style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 69px;"
+							/>
+
+						</label>
+						</div>
+						<div class="form-group">
+							<label>
+								Email Address
+								<input
+									type="email"
+									id="email"
+									class="form-control"
+									name="email"
+									placeholder="Email Address"
+									required="required"
+									style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 44px;"
+
+								/>
+							</label>
+						</div>
+						<div class="form-group">
+							<label for="phoneNumber">
+								Phone Number
+								<input 
+								type="tel" 
+								id="phoneNumber" 
+								minlength="7"
+								placeholder="+1"
+								required="required"
+								name="email"
+								class="form-control"
+								style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 37px;"
+								>
+							</label>
+						</div>
+						
+						<div class="form-group">
+							<label>
+								New Password
+								<input
+									id="psw"
+									type="password"
+									class="form-control"
+									name="password"
+									placeholder="Password"
+									required="required"
+									style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 40px;"
+								/>
+							</label>
+						</div>
+						<div class="form-group">
+							<label>
+								Confirm Password 
+								<input
+									id="cpsw"
+									type="password"
+									class="form-control"
+									name="confirm password"
+									placeholder="Confirm Password"
+									required="required"
+									style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 15px;"
+								/>
+							</label>
+						</div>
+						<div class="form-group">
+							<button>Submit</button>
+						</div>
+						<div class ="center text-center" >
+							<div id="message" style="display: block">
+								<h3 style="color: black; font-size: 17px;">Password must contain the following:</h3>
+								<p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+								<p id="capital" class="invalid">
+								A <b>capital (uppercase)</b> letter
+								</p>
+								<p id="number" class="invalid">A <b>number</b></p>
+								<p id="symbol" class="invalid">A <b>symbol</b> "!@#$%^&*()".</p>
+								<p id="length" class="invalid">Minimum <b>12 characters</b></p>
+								<p id="match" class="invalid">
+								Password and Confirm Password Match
+								</p>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</section>	
+	</main>	
+
+	<!------footer--------->
+	<footer>
+		<p>Tyler Huynh</p>
+		<p>Click one of the icons below to be transported to my social medias!</p>
+		<div class="social">
+			<a href="https://www.instagram.com/_tylerhuynh_/"><i class="fab fa-instagram"></i></a>
+			<a href="https://www.linkedin.com/in/tylerhuynh1121/"><i class="fab fa-linkedin"></i></a>
+
+		</div>
+		<p class="end">Built with ❤️ by Tyler Huynh</p>
+	</footer>
+</body>
+</html>

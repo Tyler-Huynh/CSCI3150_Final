@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Typing Header</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        .typing-animation {
+            overflow: hidden;
+            border-right: 0.15em solid #333;
+            white-space: nowrap;
+            font-size: 2em;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        .typing-animation {
+            animation: typing 3s steps(30) infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>
+            <span class="typing-animation">Accessible Typing Header</span>
+        </h1>
+    </div>
+</body>
+</html>
