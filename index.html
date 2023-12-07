@@ -1,72 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSCI3150_Final/css/styles.css">
+	<link rel="stylesheet" href="https://unpkg.com/98.css">
 
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <script src="js/lab4.js"></script>
-
+    <title>Windows 98 Inspired Website</title>
 </head>
 <body>
-		<h1 class="body-title" style="display: none;">Assignment 3</h1>
-		<div class="container">
-			<header id="main-header">
-                <div class="content">
-					<h4 style="color: #CF0A00;">Hello World, I'm</h4>
-					<div class="typewriter">
-						<h1 style="color: #CF0A00;">Tyler Huynh</h1>
+	<div class="container">
+		<header>
+			<nav>
+				<div class="title-bar">
+					<div class="title-bar-text">
+					<h1 style="font-size: 20px; margin-left: 10px;">Importance of Accessibility</h1>
+					</div>
+					<li><a href="#">What is Accessibility</a></li>
+					<li><a href="#">Why is Accessibility</a></li>
+					<li><a href="#">How is Accessibility</a></li>
+					<div class="title-bar-controls">
+					  <button aria-label="Close" style="margin-right: 10px;"></button>
 					</div>
 				</div>
-            </header>
-            <nav>
-				<h2 class="logo">Universal Portfolio</h2>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="assignment1.html">Assignment 1</a></li>
-					<li><a href="assignment2.html">Assignment 2</a></li>
-					<li><a href="assignment3.html">Assignment 3</a></li>
-				</ul>
 			</nav>
-
-			<main>
-				<section class="main-content">
-					<h1 style="color: #CF0A00;">About Me</h1>
-					<h2 style="color: #CF0A00;">Computer Science Major & Sociology Minor</h2>
-					<h3 style="color: #CF0A00;">I am a current student at the University of Colorado Boulder. I love to work with technology and just be curious about the world itself! </h3>
-				</section>
-			</main>
-			<aside class="left-col" id="left-col">
-				<h1 style="display: none;">picture</h1>
-				<img src="../CSCI3150_Website/img/tyler1.jpg" style="width: 500px;" alt="photo-of-moi">
-			</aside>
 	
-			
-
-			<aside class="bot-row" id="bot-row">
-				<h1 style="display: none;">bottom-row</h1>
-				<p style="color: #CF0A00;">From this class I have learned that the importance of accessibility for all websites is unprecdented. Not only does this allow for more people to access the website, it allows for people regardless of what disability you may have to be able to use the internet. Further, I found that the ability to introduce accessible elements into your website allows you to learn more about what a user needs, in terms of what they access when viewing your website. Different components include how your website functions when in use by a phone or tablet. Another aspect can be found such as the ability to accomadate for screen readers or even making your website have good contrast. 	</p>
-				<p style="color: #CF0A00;">I love to code and have experience coding in many languages such as Typescript, Java, JavaScript, C++, C, Python, Node.js, and etc. My main passion is to be a full stack developer mainly focusing on the backend with a little bit of the front end and integration layer. I have experience working as a fullstack developer for Charter-Spectrum and a startup that I helped found called Tick-Click. The sites that I have made used React.js, JavaScript, Typescript, and other web developer languages. Most of the sites that I have made have a certain aspect that makes it unique such as different libraries such as Three.js or special span tools like the typewriter effect you see above.  </p>
-			</aside>
-	
-		<!------footer--------->
-		<footer id="footer">
-			<p style="color: white;">Tyler Huynh</p>
-			<p>Click one of the icons below to be transported to my social medias!</p>
-			<div class="social">
-				<a href="https://www.instagram.com/_tylerhuynh_/"><i class="fa fa-instagram" aria-hidden="true"></i>Insta</a>
-				<a href="https://www.linkedin.com/in/tylerhuynh1121/"><i class="fa fa-linkedin" aria-hidden="true"></i>LinkedIn</a>
-
+		</header>
+		
+		<main>
+			<div class="window" style="margin-left: 30px;">
+				<div class="title-bar">
+					<div class="title-bar-text">
+						<h1 style="font-size: 20px;">
+							History of Accessibility
+						</h1>
+		
+					</div>
+					<div class="title-bar-controls">
+						<button aria-label="Minimize"></button>
+						<button aria-label="Maximize"></button>
+						<button aria-label="Close"></button>
+					</div>
+				</div>
+				<div class="content">
+					<h2 style="font-size: 15px"></p>
+				</div>
 			</div>
-			<p class="end" style="color: white;">Built with ❤️ by Tyler Huynh</p>
+		</main>
+		<aside class="right-col" id="right-col">
+			<img src="../CSCI3150_Final/img/atsym.gif">
+		</aside>
+		<footer>
+	
 		</footer>
 	</div>
-	
 </body>
 </html>

@@ -3,46 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accessible Typing Header</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        .header {
-            text-align: center;
-        }
-
-        .typing-animation {
-            overflow: hidden;
-            border-right: 0.15em solid #333;
-            white-space: nowrap;
-            font-size: 2em;
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-
-        .typing-animation {
-            animation: typing 3s steps(30) infinite;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <title>My 2000s-inspired Website</title>
 </head>
 <body>
-    <div class="header">
-        <h1>
-            <span class="typing-animation">Accessible Typing Header</span>
-        </h1>
+    <div class="container">
+        <header>
+            <h1>Welcome to My 2000s Website</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <h2>Featured Content</h2>
+                <p>This is some interesting content for the 2000s vibe.</p>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2023 My 2000s Website</p>
+        </footer>
     </div>
 </body>
+
+
+.title-bar {
+    align-items: center;
+    background: linear-gradient(90deg,navy,#1084d0);
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 2px 3px 3px;
+}
+
+.title-bar-controls button[aria-label=Minimize] {
+    background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg width='6' height='2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000' d='M0 0h6v2H0z'/%3E%3C/svg%3E);
+    background-position: bottom 3px left 4px;
+    background-repeat: no-repeat;
+}
 </html>
