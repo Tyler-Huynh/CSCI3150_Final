@@ -43,8 +43,10 @@ footer{
 }
 
 .navbar {
-    grid-area: nav;
+    grid-area: nav !important;
     overflow: hidden;
+    width: 100%;
+    margin-top: -10px;
 }
 
 .navbar a {
