@@ -42,11 +42,13 @@ footer{
     grid-area: left-col;
 }
 
+.nav{
+    grid-area: nav;
+}
+
 .navbar {
-    grid-area: nav !important;
     overflow: hidden;
     width: 100%;
-    margin-top: -10px;
 }
 
 .navbar a {
@@ -75,11 +77,11 @@ footer{
 			"footer";
 
     }
-    .navbar a:not(:first-child) {
+    .navbar button:not(:first-child) {
         display: none;
     }
 
-    .navbar a.icon {
+    .navbar .icon {
         float: right;
         display: block;
     }
@@ -88,13 +90,13 @@ footer{
         position: relative;
     }
 
-    .navbar.responsive a.icon {
+    .navbar.responsive .icon {
         position: absolute;
         right: 0;
         top: 0;
     }
 
-    .navbar.responsive a {
+    .navbar.responsive button {
         display: block;
         text-align: left;
     }
@@ -142,7 +144,7 @@ footer{
 }
 
 
-@media screen and (min-width: 641px) and (max-width: 991px) {
+@media screen and (min-width: 641px) and (max-width: 991px) { 
     .navbar span {
         display: none;
         visibility: hidden;
