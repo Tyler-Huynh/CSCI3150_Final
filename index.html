@@ -12,23 +12,28 @@
 <body>
 	<div class="container">
 		<header>
-			<nav>
-				<div class="title-bar">
-					<div class="title-bar-text">
-						<h1 style="font-size: 20px; margin-left: 15px;">Importance of Universal Design</h1>
-					</div>
-						<li><button><a href="../CSCI3150_Final/index.html">History of Universal Design</a></button></li>
-						<li><button><a href="../CSCI3150_Final/what.html">What is Universal Design</a></button></li>
-						<li><button><a href="../CSCI3150_Final/why.html">Why is Universal Design Important</a></button></li>
-						<li><button><a href="../CSCI3150_Final/how.html">How We Can Help</a></button></li>
-					<div class="title-bar-controls">
-						<button id="muteButton" onclick="toggleMute()" style="  #muteButton {
-							cursor: pointer;
-							font-size: 18px;
-							padding: 10px;
-							margin-right: 10px;
-						}">Unmute</button>
-					  	<button aria-label="Close" style="margin-right: 20px;"></button>
+			<nav class="navbar">
+				<div class="navbar" id="myNavbar">
+					<div class="title-bar"  style="height: 100px; padding: 0%;">
+						<div class="title-bar-text">
+							<h1 style="font-size: 20px; margin-left: 15px;">Importance of Universal Design</h1>
+						</div>
+							<li><button><a href="../CSCI3150_Final/index.html">Home</a></button></li>
+							<li><button><a href="../CSCI3150_Final/what.html">What is Universal Design</a></button></li>
+							<li><button><a href="../CSCI3150_Final/why.html">Why is Universal Design Important</a></button></li>
+							<li><button><a href="../CSCI3150_Final/how.html">How We Can Help</a></button></li>
+							<a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+								&#9776;
+							</a>
+						<div class="title-bar-controls">
+							<button id="muteButton" onclick="toggleMute()" style="  #muteButton {
+								cursor: pointer;
+								font-size: 18px;
+								padding: 20px;
+								margin-right: 10px;
+							}">Unmute</button>
+							  <button aria-label="Close" style="margin-right: 20px;"></button>
+						</div>
 					</div>
 				</div>
 				<audio id="myAudio" autoplay>
@@ -51,6 +56,15 @@
 						document.getElementById('muteButton').innerText = 'Unmute';
 					}
 				}
+
+				function toggleNavbar() {
+					var navbar = document.getElementById("myNavbar");
+					if (navbar.className === "navbar") {
+						navbar.className += " responsive";
+					} else {
+						navbar.className = "navbar";
+					}
+				}
 			</script>
 	
 		</header>
@@ -71,11 +85,37 @@
 					</div>
 				</div>
 				<div class="content">
-					<h2 style="font-size: 15px;"> Accessibility is a topic that has been in discussion for years. With roots in the civil rights movement and the Civil Rights Act of 1964. This spawned numerous laws that forced corporations and places of power to make things accessible to everyone especially the internet. </h2>
-					<h2 style="font-size: 15px;">Universal Design on the internet includes screen-readers, easy and thumbable sites that all people can enjoy regardless of what disability one may have. There are many pioneers that helped define exactly what accessibility really is. Some of those people are Don Norman and Jakob Nielsen, who developed the 10 usability heuristics better known as Normans heuristics.</h2>
+					<h2 style="font-size: 15px;"> Hello, and welcome to my page. This website is here to provide designers such as yourself more information as to what Universal Design is and the importance of it. </h2>
+					<h2 style="font-size: 15px;"></h2>
+
 				</div>
 			</div>
 		</main>
+		<aside class="left-col" id="left-col">
+			<div class="window" style="margin-left: auto">
+				<div class="title-bar">
+					<div class="title-bar-text">
+						<h1 style="font-size: 20px;">
+							What is Universal Design?
+						</h1>
+						
+					</div>
+					<div class="title-bar-controls">
+						<button aria-label="Minimize"></button>
+						<button aria-label="Maximize"></button>
+						<button aria-label="Close"></button>
+					</div>
+				</div>
+				<div class="content">
+					<h2 style="font-size: 15px;"> Universal Design is the ability to make most if not all features of your website or any other design accessible for people with disabilities to be able to use. </h2>
+					<h2 style="font-size: 15px;"> Some examples of accessibility that can be found in websites is the ability to add a screen-reader to your website so people who have trouble seeing can still get information from their favorite website without having much trouble. Many devices such as Window's laptops or MacBook's have the ability to read the information present on the screen to the user, granted that screen-reader technology is implemented. </h2>
+					<h2 style="font-size: 15px;">Another example of accssibility is the ability to make the website have good design and amazing contrast. Websites that have good contrast allow for the text that is present on the screen to be easily read. Good design allows the website to be easily navigated through without causing too much trouble to the user. </h2>
+					<h2 style="font-size: 15px;"></h2>
+				</div>
+			</div>
+			
+
+		</aside>
 		<aside class="right-col" id="right-col">
 			<div class="window" style="margin-left: auto;">
 				<div class="title-bar">
