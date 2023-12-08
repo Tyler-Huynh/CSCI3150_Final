@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="https://unpkg.com/98.css">
 
 
-    <title>History of Accessibility</title>
+    <title>History of Universal Design</title>
 </head>
 <body>
 	<div class="container">
@@ -15,26 +15,52 @@
 			<nav>
 				<div class="title-bar">
 					<div class="title-bar-text">
-					<h1 style="font-size: 20px; margin-left: 10px;">Importance of Accessibility</h1>
+						<h1 style="font-size: 20px; margin-left: 15px;">Importance of Universal Design</h1>
 					</div>
-					<li><button><a href="../CSCI3150_Final/index.html">History of Accessibility</a></button></li>
-					<li><button><a href="../CSCI3150_Final/what.html">What is Accessibility</a></button></li>
-					<li><button><a href="../CSCI3150_Final/why.html">Why is Accessibility Important</a></button></li>
-					<li><button><a href="../CSCI3150_Final/how.html">How We Can Help</a></button></li>
+						<li><button><a href="../CSCI3150_Final/index.html">History of Universal Design</a></button></li>
+						<li><button><a href="../CSCI3150_Final/what.html">What is Universal Design</a></button></li>
+						<li><button><a href="../CSCI3150_Final/why.html">Why is Universal Design Important</a></button></li>
+						<li><button><a href="../CSCI3150_Final/how.html">How We Can Help</a></button></li>
 					<div class="title-bar-controls">
-					  <button aria-label="Close" style="margin-right: 10px;"></button>
+						<button id="muteButton" onclick="toggleMute()" style="  #muteButton {
+							cursor: pointer;
+							font-size: 18px;
+							padding: 10px;
+							margin-right: 10px;
+						}">Unmute</button>
+					  	<button aria-label="Close" style="margin-right: 20px;"></button>
 					</div>
 				</div>
+				<audio id="myAudio" autoplay>
+					<source src="../CSCI3150_Final/img/Trance - 009 Sound System Dreamscape (HD).mp3" type="audio/mp3">
+					Your browser does not support the audio tag.
+				</audio>
 			</nav>
+
+			<script>
+				// Get the audio or video element
+				var mediaElement = document.getElementById('myAudio'); // Replace 'yourMediaElementId' with the actual ID of your audio/video element
+		
+				// Function to toggle mute/unmute
+				function toggleMute() {
+					if (mediaElement.muted) {
+						mediaElement.muted = false;
+						document.getElementById('muteButton').innerText = 'Mute';
+					} else {
+						mediaElement.muted = true;
+						document.getElementById('muteButton').innerText = 'Unmute';
+					}
+				}
+			</script>
 	
 		</header>
-		
-		<main>
-			<div class="window" style="margin-left: 500px;">
+
+		<main class="main">
+			<div class="window">
 				<div class="title-bar">
 					<div class="title-bar-text">
 						<h1 style="font-size: 20px;">
-							History of Accessibility
+							History of Universal Design
 						</h1>
 						
 					</div>
@@ -46,7 +72,7 @@
 				</div>
 				<div class="content">
 					<h2 style="font-size: 15px;"> Accessibility is a topic that has been in discussion for years. With roots in the civil rights movement and the Civil Rights Act of 1964. This spawned numerous laws that forced corporations and places of power to make things accessible to everyone especially the internet. </h2>
-					<h2 style="font-size: 15px;">Accessibility on the internet includes screen-readers, easy and thumbable sites that all people can enjoy regardless of what disability one may have. There are many pioneers that helped define exactly what accessibility really is. Some of those people are Don Norman and Jakob Nielsen, who developed the 10 usability heuristics better known as Normans heuristics.</h2>
+					<h2 style="font-size: 15px;">Universal Design on the internet includes screen-readers, easy and thumbable sites that all people can enjoy regardless of what disability one may have. There are many pioneers that helped define exactly what accessibility really is. Some of those people are Don Norman and Jakob Nielsen, who developed the 10 usability heuristics better known as Normans heuristics.</h2>
 				</div>
 			</div>
 		</main>
