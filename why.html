@@ -5,76 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSCI3150_Final/css/styles.css">
 	<link rel="stylesheet" href="https://unpkg.com/98.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
     <title>Why is Accessibility Important?</title>
 </head>
 <body>
-	<div class="container">
-		<header>
-			<nav class="navbar">
-				<div class="navbar" id="myNavbar">
-					<div class="title-bar"  style="height: 100px; padding: 0%;">
-						<div class="title-bar-text">
-							<h1 style="font-size: 20px; margin-left: 15px;">Importance of Universal Design</h1>
-						</div>
-                        <li><button><a href="../CSCI3150_Final/index.html">Home</a></button></li>
-                        <li><button><a href="../CSCI3150_Final/what.html">What is Universal Design</a></button></li>
-							<li><button><a href="../CSCI3150_Final/why.html">Why is Universal Design Important</a></button></li>
-							<li><button><a href="../CSCI3150_Final/how.html">How We Can Help</a></button></li>
-							<a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
-								&#9776;
-							</a>
-						<div class="title-bar-controls">
-							<button id="muteButton" onclick="toggleMute()" style="  #muteButton {
-								cursor: pointer;
-								font-size: 18px;
-								padding: 20px;
-								margin-right: 10px;
-							}">Unmute</button>
-							  <button aria-label="Close" style="margin-right: 20px;"></button>
-						</div>
-					</div>
+	<h1 style="display: none;"> Main Content</h1>
+	<header>
+		<div class="title-bar">
+			<nav class="navbar navbar-expand-md navbar-dark">
+				<h1 style="display: none;"> Main Nav</h1>
+				<a class="navbar-brand" href="../CSCI3150_Final/index.html" style="margin-left: 10px;" >Importance of Universal Design</a>
+				<button class="navbar-toggler"  data-toggle="collapse" data-target="#collapsibleNavbar" aria-label="Nav button">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="collapsibleNavbar" style="margin-left: 10px;">
+				  <ul class="navbar-nav">
+					<li class="nav-item"><button><a class="nav-link"  href="../CSCI3150_Final/what.html" style="color: black;">What is Universal Design</a></button></li>
+					<li class="nav-item"><button><a class="nav-link" href="../CSCI3150_Final/why.html" style="color: black;">Why is Universal Design Important</a></button></li>
+					<li class="nav-item"><button><a class="nav-link" href="../CSCI3150_Final/how.html" style="color: black;">How We Can Help</a></button></li>
+				  </ul>
 				</div>
-				<audio id="myAudio" autoplay>
-					<source src="../CSCI3150_Final/img/Trance - 009 Sound System Dreamscape (HD).mp3" type="audio/mp3">
-					Your browser does not support the audio tag.
-				</audio>
-			</nav>
+				<button id="muteButton" onclick="toggleMute()">Unmute</button>
+			  </nav>
+			  <audio id="myAudio" autoplay>
+				<source src="../CSCI3150_Final/img/Trance-009SoundSystemDreamscape(HD).mp3" type="audio/mp3">
+				Your browser does not support the audio tag.
+			</audio>
+			<div class="title-bar-controls">
+				<button aria-label="Close" style="margin-bottom: 50px;"></button>
+			  </div>
+			</div>
+	</header>
+	<script>
+		// Get the audio or video element
+		var mediaElement = document.getElementById('myAudio'); // Replace 'yourMediaElementId' with the actual ID of your audio/video element
 
-			<script>
-				// Get the audio or video element
-				var mediaElement = document.getElementById('myAudio'); // Replace 'yourMediaElementId' with the actual ID of your audio/video element
-		
-				// Function to toggle mute/unmute
-				function toggleMute() {
-					if (mediaElement.muted) {
-						mediaElement.muted = false;
-						document.getElementById('muteButton').innerText = 'Mute';
-					} else {
-						mediaElement.muted = true;
-						document.getElementById('muteButton').innerText = 'Unmute';
-					}
-				}
+		// Function to toggle mute/unmute
+		function toggleMute() {
+			if (mediaElement.muted) {
+				mediaElement.muted = false;
+				document.getElementById('muteButton').innerText = 'Mute';
+			} else {
+				mediaElement.muted = true;
+				document.getElementById('muteButton').innerText = 'Unmute';
+			}
+		}
 
-				function toggleNavbar() {
-					var navbar = document.getElementById("myNavbar");
-					if (navbar.className === "navbar") {
-						navbar.className += " responsive";
-					} else {
-						navbar.className = "navbar";
-					}
-				}
-			</script>
-	
-		</header>
-		
+		function toggleNavbar() {
+			var navbar = document.getElementById("myNavbar");
+			if (navbar.className === "navbar") {
+				navbar.className += " responsive";
+			} else {
+				navbar.className = "navbar";
+			}
+		}
+	</script>
+	<div class="container">
 		<main>
-			<div class="window" style="margin-left: 500px;">
+			
+		</main>
+		<aside class="left-col" id="left-col">
+			<div class="window" style="margin-right: 50px;">
 				<div class="title-bar">
 					<div class="title-bar-text">
 						<h1 style="font-size: 20px;">
-							What is Accessibility?
+							Why is Accessibility Important?
 						</h1>
 						
 					</div>
@@ -85,19 +86,15 @@
 					</div>
 				</div>
 				<div class="content">
-					<h2 style="font-size: 15px;"> Accessibility is the ability to make most if not all features of your website or any other design accessible for people with disabilities to be able to use. </h2>
-					<h2 style="font-size: 15px;"> Some examples of accessibility that can be found in websites is the ability to add a screen-reader to your website so people who have trouble seeing can still get information from their favorite website without having much trouble. Many devices such as Window's laptops or MacBook's have the ability to read the information present on the screen to the user, granted that screen-reader technology is implemented. </h2>
-					<h2 style="font-size: 15px;">Another example of accssibility is the ability to make the website have good design and amazing contrast. Websites that have good contrast allow for the text that is present on the screen to be easily read. Good design allows the website to be easily navigated through without causing too much trouble to the user. </h2>
-					<h2 style="font-size: 15px;"></h2>
+					<h2 style="font-size: 20px;"> Universal Design is important because it allows for us to promote inclusivity when designing websites and other things that people use everyday. There are many aspects of Universal Design that are implemented to accomadate everyone regardless of what disability they may have, whether it be there age, size, or disability. Universal Design is here to allow for everyone the ability to live life as they see fit.  </h2>
+					<h2 style="font-size: 20px;"> There are many reasons as to why implementing Universal Design benefits us all, some of them are below! </h2>
 				</div>
 			</div>
-		</main>
-		<aside class="right-col" id="right-col">
-			<div class="window" style="margin-left: auto;">
+			<div class="window" style="margin-right: 50px; margin-top: 20px;">
 				<div class="title-bar">
 					<div class="title-bar-text">
 						<h1 style="font-size: 20px;">
-							Norman's Heuristics
+							Save you Money!
 						</h1>
 						
 					</div>
@@ -108,23 +105,54 @@
 					</div>
 				</div>
 				<div class="content">
-					<h2 style="font-size: 15px">Norman's heuristics include different usabiltiy heuristics that were developed to help designers in making their designs more accessible, the following are the 10 heurisitcs: </h2>
-					<h2 style="font-size: 15px">Visibility of System Status</h2>
-					<h2 style="font-size: 15px">Match between System and the Real World</h2>
-					<h2 style="font-size: 15px">User Control and Freedom</h2>
-					<h2 style="font-size: 15px">Consistency and Standards</h2>
-					<h2 style="font-size: 15px">Error Prevention</h2>
-					<h2 style="font-size: 15px">Recognition, Rather Than Recall</h2>
-					<h2 style="font-size: 15px">Flexibility and Efficiency of Use</h2>
-					<h2 style="font-size: 15px">Aesthetic and Minimalist Design</h2>
-					<h2 style="font-size: 15px">Recognize, Diagnose, and Recover from Errors</h2>
-					<h2 style="font-size: 15px">Help and Documentation</h2>
+					<h2 style="font-size: 20px;">Universal Design allows for less of a need when retrofitting a website to allow for inclusivity, thus making the decision to make the site inclusive allows for cost-effectiveness. </h2>	
+				</div>
+			</div>
+			<div class="window" style="margin-right: 50px; margin-top: 20px;">
+				<div class="title-bar">
+					<div class="title-bar-text">
+						<h1 style="font-size: 20px;">
+							Inclusivity!
+						</h1>
+						
+					</div>
+					<div class="title-bar-controls">
+						<button aria-label="Minimize"></button>
+						<button aria-label="Maximize"></button>
+						<button aria-label="Close"></button>
+					</div>
+				</div>
+				<div class="content">
+					<h2 style="font-size: 20px;">Universal Design allows for people of all abilities to have equal access and ease of use to innovative technologies and devices. </h2>	
+				</div>
+			</div>
 
+		</aside>
+		<aside class="right-col" id="right-col">
+			<div class="window">
+				<div class="title-bar">
+					<div class="title-bar-text">
+						<h1 style="font-size: 20px;">
+							Benefits a Large Portion of Our World!
+						</h1>
+						
+					</div>
+					<div class="title-bar-controls">
+						<button aria-label="Minimize"></button>
+						<button aria-label="Maximize"></button>
+						<button aria-label="Close"></button>
+					</div>
+				</div>
+				<div class="content">
+					<h2 style="font-size: 20px;">There is an estimated 1.3 billion people in the world today that experience a significant disability. Where this number is growing due to noncommunicable diseases and people living longer.</h2>	
+					<img src="../CSCI3150_Final/img/who.jfif" style="width: 300px; margin-left: 45px; margin-bottom: 10px;" alt="who image about disabilities">
+					<h2 style="font-size: 20px;">From this we can see that Universal Design is important to promote and to inlcude within our design of various technologies. Some of these disabilities such as visual impairments, mental impairments, mobility impairments, etc. it is up to us as engineers and designers to engineer and design tools that can accomadate everyone.  </h2>	
 
 				</div>
 			</div>
 		</aside>
 		<footer>
+			
 	
 		</footer>
 	</div>

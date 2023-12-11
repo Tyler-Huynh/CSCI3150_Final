@@ -7,125 +7,118 @@
 	<link rel="stylesheet" href="https://unpkg.com/98.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
     <title>History of Universal Design</title>
+	
 </head>
 <body>
-	<div class="container">
-		<header>
-			<nav class="navbar" style="grid-area: nav;">
-				<div class="navbar" id="myNavbar">
-					<div class="title-bar"  style="height: 100px; padding: 0%;">
-						<div class="title-bar-text">
-							<h1 style="font-size: 20px; margin-left: 15px;">Importance of Universal Design</h1>
-						</div>
-							<li><button><a href="../CSCI3150_Final/index.html">Home</a></button></li>
-							<li><button><a href="../CSCI3150_Final/what.html">What is Universal Design</a></button></li>
-							<li><button><a href="../CSCI3150_Final/why.html">Why is Universal Design Important</a></button></li>
-							<li><button><a href="../CSCI3150_Final/how.html">How We Can Help</a></button></li>
-							<a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
-								&#9776;
-							</a>
-						<div class="title-bar-controls">
-							<button id="muteButton" onclick="toggleMute()" style="  #muteButton {
-								cursor: pointer;
-								font-size: 18px;
-								padding: 20px;
-								margin-right: 10px;
-							}">Unmute</button>
-							  <button aria-label="Close" style="margin-right: 20px;"></button>
-						</div>
-					</div>
+	<h1 style="display: none;"> Main Content</h1>
+	<header>
+		<div class="title-bar">
+			<nav class="navbar navbar-expand-md navbar-dark">
+				<h1 style="display: none;"> Main Nav</h1>
+				<a class="navbar-brand" href="../CSCI3150_Final/index.html" style="margin-left: 10px;" >Importance of Universal Design</a>
+				<button class="navbar-toggler"  data-toggle="collapse" data-target="#collapsibleNavbar" aria-label="Nav button">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="collapsibleNavbar" style="margin-left: 10px;">
+				  <ul class="navbar-nav">
+					<li class="nav-item"><button><a class="nav-link"  href="../CSCI3150_Final/what.html" style="color: black;">What is Universal Design</a></button></li>
+					<li class="nav-item"><button><a class="nav-link" href="../CSCI3150_Final/why.html" style="color: black;">Why is Universal Design Important</a></button></li>
+					<li class="nav-item"><button><a class="nav-link" href="../CSCI3150_Final/how.html" style="color: black;">How We Can Help</a></button></li>
+				  </ul>
 				</div>
-				<audio id="myAudio" autoplay>
-					<source src="../CSCI3150_Final/img/Trance - 009 Sound System Dreamscape (HD).mp3" type="audio/mp3">
-					Your browser does not support the audio tag.
-				</audio>
-			</nav>
+				<button id="muteButton" onclick="toggleMute()">Unmute</button>
+			  </nav>
+			  <audio id="myAudio" autoplay>
+				<source src="../CSCI3150_Final/img/Trance-009SoundSystemDreamscape(HD).mp3" type="audio/mp3">
+				Your browser does not support the audio tag.
+			</audio>
+			<div class="title-bar-controls">
+				<button aria-label="Close" style="margin-bottom: 50px;"></button>
+			  </div>
+			</div>
+	</header>
+	<script>
+		// Get the audio or video element
+		var mediaElement = document.getElementById('myAudio'); 
 
-			<script>
-				// Get the audio or video element
-				var mediaElement = document.getElementById('myAudio'); 
-		
-				// Function to toggle mute/unmute
-				function toggleMute() {
-					if (mediaElement.muted) {
-						mediaElement.muted = false;
-						document.getElementById('muteButton').innerText = 'Mute';
-					} else {
-						mediaElement.muted = true;
-						document.getElementById('muteButton').innerText = 'Unmute';
-					}
-				}
+		// Function to toggle mute/unmute
+		function toggleMute() {
+			if (mediaElement.muted) {
+				mediaElement.muted = false;
+				document.getElementById('muteButton').innerText = 'Mute';
+			} else {
+				mediaElement.muted = true;
+				document.getElementById('muteButton').innerText = 'Unmute';
+			}
+		}
 
-				function toggleNavbar() {
-					var navbar = document.getElementById("myNavbar");
-					if (navbar.className === "navbar") {
-						navbar.className += " responsive";
-					} else {
-						navbar.className = "navbar";
-					}
-				}
-			</script>
+		function toggleNavbar() {
+			var navbar = document.getElementById("myNavbar");
+			if (navbar.className === "navbar") {
+				navbar.className += " responsive";
+			} else {
+				navbar.className = "navbar";
+			}
+		}
+	</script>
+	<div class="container">
 	
-		</header>
 
 		<main class="main">
+		</main>
+		<aside class="left-col" id="left-col">
 			<div class="window">
 				<div class="title-bar">
 					<div class="title-bar-text">
-						<h1 style="font-size: 20px;">
+						<h1 style="font-size: 25px;">
 							History of Universal Design
 						</h1>
 						
 					</div>
-					<div class="title-bar-controls">
+					<div class="title-bar-controls" style="margin-bottom: 30px;">
 						<button aria-label="Minimize"></button>
 						<button aria-label="Maximize"></button>
 						<button aria-label="Close"></button>
 					</div>
 				</div>
 				<div class="content">
-					<h2 style="font-size: 15px;"> Hello, and welcome to my page. This website is here to provide designers such as yourself more information as to what Universal Design is and the importance of it. </h2>
-					<h2 style="font-size: 15px;">On the other pages of the site will be information to provide more context on Universal Design and how we as a society can benefit from the implementation and maintenance of it. </h2>
+					<h2 style="font-size: 20px;"> Hello, and welcome to my page. This website is here to provide designers such as yourself more information as to what Universal Design is and the importance of it. </h2>
+					<h2 style="font-size: 20px;">On the other pages of the site will be information to provide more context on Universal Design and how we as a society can benefit from the implementation and maintenance of it. </h2>
 
 				</div>
 			</div>
-		</main>
-		<aside class="left-col" id="left-col">
 			
 			
 
 		</aside>
 		<aside class="right-col" id="right-col">
-			<div class="window" style="margin-left: auto;">
+			<div class="window">
 				<div class="title-bar">
 					<div class="title-bar-text">
-						<h1 style="font-size: 20px;">
-							Norman's Heuristics
+						<h1 style="font-size: 25px;">
+							Origins
 						</h1>
 						
 					</div>
-					<div class="title-bar-controls">
+					<div class="title-bar-controls" style="margin-bottom: 30px;">
 						<button aria-label="Minimize"></button>
 						<button aria-label="Maximize"></button>
 						<button aria-label="Close"></button>
 					</div>
 				</div>
 				<div class="content">
-					<h2 style="font-size: 15px">Norman's heuristics include different usabiltiy heuristics that were developed to help designers in making their designs more accessible, the following are the 10 heurisitcs: </h2>
-					<h2 style="font-size: 15px">Visibility of System Status</h2>
-					<h2 style="font-size: 15px">Match between System and the Real World</h2>
-					<h2 style="font-size: 15px">User Control and Freedom</h2>
-					<h2 style="font-size: 15px">Consistency and Standards</h2>
-					<h2 style="font-size: 15px">Error Prevention</h2>
-					<h2 style="font-size: 15px">Recognition, Rather Than Recall</h2>
-					<h2 style="font-size: 15px">Flexibility and Efficiency of Use</h2>
-					<h2 style="font-size: 15px">Aesthetic and Minimalist Design</h2>
-					<h2 style="font-size: 15px">Recognize, Diagnose, and Recover from Errors</h2>
-					<h2 style="font-size: 15px">Help and Documentation</h2>
+					<h2 style="font-size: 20px"> Universal Design is a topic that was coined by Ronald Mace who wanted to focus on accessible housing with a universal design.</h2>
+					<h2 style="font-size: 20px"> Mace championed accessible building codes and standards within the United States, from this spawned Universal Designed being implemented in every aspect of society. </h2>
+					<h2 style="font-size: 20px"> Univesal Design has evolved over the years, as in the beginning there were no laws to accomadate for Universal Design, as the century went on more laws were put into place gaining momentum and spawning better accessible practices within design. </h2>
+					<h2 style="font-size: 20px"> Assistive Technologies also evolved during this time allowing for those with specific disabilities to be able to access everyday technologies and devices. </h2>
+					<h2 style="font-size: 20px"> Due to this increasing rise in accessible design, design that was not originally made to focus on humans, was changed to then include the inclusivity of human needs even in the beginning of the design process.</h2>
+
 
 
 				</div>

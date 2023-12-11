@@ -5,42 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSCI3150_Final/css/styles.css">
 	<link rel="stylesheet" href="https://unpkg.com/98.css">
-
-
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>How Can We Help Spread Accessibility?</title>
 </head>
 <body>
-	<div class="container">
-		<header>
-			<nav class="navbar">
-				<div class="navbar" id="myNavbar">
-					<div class="title-bar"  style="height: 100px; padding: 0%;">
-						<div class="title-bar-text">
-							<h1 style="font-size: 20px; margin-left: 15px;">Importance of Universal Design</h1>
-						</div>
-                        <li><button><a href="../CSCI3150_Final/index.html">Home</a></button></li>
-                        <li><button><a href="../CSCI3150_Final/what.html">What is Universal Design</a></button></li>
-							<li><button><a href="../CSCI3150_Final/why.html">Why is Universal Design Important</a></button></li>
-							<li><button><a href="../CSCI3150_Final/how.html">How We Can Help</a></button></li>
-							<a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
-								&#9776;
-							</a>
-						<div class="title-bar-controls">
-							<button id="muteButton" onclick="toggleMute()" style="  #muteButton {
-								cursor: pointer;
-								font-size: 18px;
-								padding: 20px;
-								margin-right: 10px;
-							}">Unmute</button>
-							  <button aria-label="Close" style="margin-right: 20px;"></button>
-						</div>
-					</div>
+	<h1 style="display: none;"> Main Content</h1>
+	<header>
+		<div class="title-bar">
+			<nav class="navbar navbar-expand-md navbar-dark">
+				<h1 style="display: none;"> Main Nav</h1>
+				<a class="navbar-brand" href="../CSCI3150_Final/index.html" style="margin-left: 10px;" >Importance of Universal Design</a>
+				<button class="navbar-toggler"  data-toggle="collapse" data-target="#collapsibleNavbar" aria-label="Nav button">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="collapsibleNavbar" style="margin-left: 10px;">
+				  <ul class="navbar-nav">
+					<li class="nav-item"><button><a class="nav-link"  href="../CSCI3150_Final/what.html" style="color: black;">What is Universal Design</a></button></li>
+					<li class="nav-item"><button><a class="nav-link" href="../CSCI3150_Final/why.html" style="color: black;">Why is Universal Design Important</a></button></li>
+					<li class="nav-item"><button><a class="nav-link" href="../CSCI3150_Final/how.html" style="color: black;">How We Can Help</a></button></li>
+				  </ul>
 				</div>
-				<audio id="myAudio" autoplay>
-					<source src="../CSCI3150_Final/img/Trance - 009 Sound System Dreamscape (HD).mp3" type="audio/mp3">
-					Your browser does not support the audio tag.
-				</audio>
-			</nav>
+				<button id="muteButton" onclick="toggleMute()">Unmute</button>
+			  </nav>
+			  <audio id="myAudio" autoplay>
+				<source src="../CSCI3150_Final/img/Trance-009SoundSystemDreamscape(HD).mp3" type="audio/mp3">
+				Your browser does not support the audio tag.
+			</audio>
+			<div class="title-bar-controls">
+				<button aria-label="Close" style="margin-bottom: 50px;"></button>
+			  </div>
+			</div>
+	</header>
+	<div class="container">
 
 			<script>
 				// Get the audio or video element
@@ -66,37 +66,15 @@
 					}
 				}
 			</script>
-		</header>
 		
 		<main>
-			<div class="window" style="margin-left: 500px;">
-				<div class="title-bar">
-					<div class="title-bar-text">
-						<h1 style="font-size: 20px;">
-							What is Accessibility?
-						</h1>
-						
-					</div>
-					<div class="title-bar-controls">
-						<button aria-label="Minimize"></button>
-						<button aria-label="Maximize"></button>
-						<button aria-label="Close"></button>
-					</div>
-				</div>
-				<div class="content">
-					<h2 style="font-size: 15px;"> Accessibility is the ability to make most if not all features of your website or any other design accessible for people with disabilities to be able to use. </h2>
-					<h2 style="font-size: 15px;"> Some examples of accessibility that can be found in websites is the ability to add a screen-reader to your website so people who have trouble seeing can still get information from their favorite website without having much trouble. Many devices such as Window's laptops or MacBook's have the ability to read the information present on the screen to the user, granted that screen-reader technology is implemented. </h2>
-					<h2 style="font-size: 15px;">Another example of accssibility is the ability to make the website have good design and amazing contrast. Websites that have good contrast allow for the text that is present on the screen to be easily read. Good design allows the website to be easily navigated through without causing too much trouble to the user. </h2>
-					<h2 style="font-size: 15px;"></h2>
-				</div>
-			</div>
 		</main>
-		<aside class="right-col" id="right-col">
-			<div class="window" style="margin-left: auto;">
+		<aside class="left-col" id="left-col" style="margin-top: 30px;">
+			<div class="window" style="margin-right: 10px;">
 				<div class="title-bar">
 					<div class="title-bar-text">
-						<h1 style="font-size: 20px;">
-							Norman's Heuristics
+						<h1 style="font-size: 25px;">
+							How can we help?
 						</h1>
 						
 					</div>
@@ -107,21 +85,108 @@
 					</div>
 				</div>
 				<div class="content">
-					<h2 style="font-size: 15px">Norman's heuristics include different usabiltiy heuristics that were developed to help designers in making their designs more accessible, the following are the 10 heurisitcs: </h2>
-					<h2 style="font-size: 15px">Visibility of System Status</h2>
-					<h2 style="font-size: 15px">Match between System and the Real World</h2>
-					<h2 style="font-size: 15px">User Control and Freedom</h2>
-					<h2 style="font-size: 15px">Consistency and Standards</h2>
-					<h2 style="font-size: 15px">Error Prevention</h2>
-					<h2 style="font-size: 15px">Recognition, Rather Than Recall</h2>
-					<h2 style="font-size: 15px">Flexibility and Efficiency of Use</h2>
-					<h2 style="font-size: 15px">Aesthetic and Minimalist Design</h2>
-					<h2 style="font-size: 15px">Recognize, Diagnose, and Recover from Errors</h2>
-					<h2 style="font-size: 15px">Help and Documentation</h2>
-
+					<h2 style="font-size: 20px;"> We can help implement and make Universal Design more widely known by just simply talking about it and implementing it into various designs that we do. </h2>
+					<h2 style="font-size: 20px;"> By doing this we can allow for Universal Design to take a stronger hold in more site and aspects of design. </h2>
 
 				</div>
 			</div>
+
+		</aside>
+		<aside class="right-col" id="right-col" style="margin-top: 30px;">
+			<div class="window">
+				<div class="title-bar">
+					<div class="title-bar-text">
+						<h1 style="font-size: 25px;">
+							Ways we can Help
+						</h1>
+						
+					</div>
+					<div class="title-bar-controls">
+						<button aria-label="Minimize"></button>
+						<button aria-label="Maximize"></button>
+						<button aria-label="Close"></button>
+					</div>
+				</div>
+				<div class="content">
+					<h2 style="font-size: 20px;"> There are many ways that we can help spread more awareness about Universal Design, some of those ways are listed below. </h2>
+				</div>
+			</div>
+
+			<div class="window" style="margin-top: 20px;">
+				<div class="title-bar">
+					<div class="title-bar-text">
+						<h1 style="font-size: 25px;">
+							Education and Awareness
+						</h1>
+						
+					</div>
+					<div class="title-bar-controls">
+						<button aria-label="Minimize"></button>
+						<button aria-label="Maximize"></button>
+						<button aria-label="Close"></button>
+					</div>
+				</div>
+				<div class="content">
+					<h2 style="font-size: 20px;"> By providing classes on Universal Design anyone of any background can learn more about implementing proper Universal Design within their work.  </h2>
+				</div>
+			</div>
+			<div class="window" style="margin-top: 20px;">
+				<div class="title-bar">
+					<div class="title-bar-text">
+						<h1 style="font-size: 25px;">
+							Creating Laws and Regulations
+						</h1>
+						
+					</div>
+					<div class="title-bar-controls">
+						<button aria-label="Minimize"></button>
+						<button aria-label="Maximize"></button>
+						<button aria-label="Close"></button>
+					</div>
+				</div>
+				<div class="content">
+					<h2 style="font-size: 20px;"> We can also promote Universal Design by enforcing it within our laws, regulating companies and individuals to design with human intention in mind. Creating laws and regulations that are made so that people must abide by these guidlines to promote inclusivity.  </h2>
+				</div>
+			</div>
+			<div class="window" style="margin-top: 20px;">
+				<div class="title-bar">
+					<div class="title-bar-text">
+						<h1 style="font-size: 25px;">
+							Leadership
+						</h1>
+						
+					</div>
+					<div class="title-bar-controls">
+						<button aria-label="Minimize"></button>
+						<button aria-label="Maximize"></button>
+						<button aria-label="Close"></button>
+					</div>
+				</div>
+				<div class="content">
+					<h2 style="font-size: 20px;"> This will probably be the most important topic, as leaders within our world and industry leaders such as Apple or Windows can promote inclusivity within their own products to allow for others to follow within their footsteps. An example of this can been seen within many of Apple's devices, that allow for everyone to use their devices regardless of what disability they may have.  </h2>
+					<img src="../CSCI3150_Final/img/accessibility-site.jpg" style="width: 300px; margin-left: 50px;" alt="image about Apple's accessibility practices">
+				</div>
+			</div>
+
+			<div class="window" style="margin-top: 20px;">
+				<div class="title-bar">
+					<div class="title-bar-text">
+						<h1 style="font-size: 25px;">
+							Listening To Users
+						</h1>
+						
+					</div>
+					<div class="title-bar-controls">
+						<button aria-label="Minimize"></button>
+						<button aria-label="Maximize"></button>
+						<button aria-label="Close"></button>
+					</div>
+				</div>
+				<div class="content">
+					<h2 style="font-size: 20px;"> Many companies already do this to better their products, but the ability to listen to what consumers are saying about their products they can better implement solutions that are designed to solve the issue and thus creating a more universally acceptable design that can be used by everyone.  </h2>
+				</div>
+			</div>
+
 		</aside>
 		<footer>
 	
