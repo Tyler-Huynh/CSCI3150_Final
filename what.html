@@ -16,7 +16,7 @@
 	<h1 style="display: none;"> Main Content</h1>
 	<header>
 		<div class="title-bar">
-			<nav class="navbar navbar-expand-md navbar-dark">
+			<nav class="navbar navbar-expand-md navbar-dark" aria-label="navigation">
 				<h1 style="display: none;"> Main Nav</h1>
 				<a class="navbar-brand" href="../CSCI3150_Final/index.html" style="margin-left: 10px;" >Importance of Universal Design</a>
 				<button class="navbar-toggler"  data-toggle="collapse" data-target="#collapsibleNavbar" aria-label="Nav button">
@@ -32,8 +32,9 @@
 				<button id="muteButton" onclick="toggleMute()" style="font-size: 15px;">Unmute</button>
 			  </nav>
 			  <audio id="myAudio" autoplay>
-				<source src="../CSCI3150_Final/img/Trance-009SoundSystemDreamscape(HD).mp3" type="audio/mp3">
+				<source src="../CSCI3150_Final/img/CameronsWorlddub.mp3" type="audio/mp3">
 				Your browser does not support the audio tag.
+				<h1 style="display: none;">Music copyrights to Blordow on SoundCloud, Pilotredsun on Soundcloud, and Robin Power on SoundCloud </h1>
 			</audio>
 			<div class="title-bar-controls">
 				<button aria-label="Close" style="margin-bottom: 50px;"></button>
@@ -45,9 +46,9 @@
 
 		document.addEventListener("DOMContentLoaded", function (){
 			const songs = [
-                '/CSCI3150_Final/img/Trance-009SoundSystemDreamscape(HD).mp3',
-                '/CSCI3150_Final/img/009SoundSystemWithASpiritOFFICIALHD.mp3',
-                'https://example.com/song3.mp3',
+				'/CSCI3150_Final/img/JermaSleepingPlanets.mp3',
+				'/CSCI3150_Final/img/Pilotredsun-FleeceSnowkbs.mp3',
+				'/CSCI3150_Final/img/CameronsWorlddub.mp3',
             ];
 
             // Get a random index to select a song
@@ -91,8 +92,8 @@
 				</div>
 				<div class="content">
 					<h2 style="font-size: 20px;"> Universal Design is the ability to make most if not all features of your website or any other design accessible for people with disabilities to be able to use. </h2>
-					<h2 style="font-size: 20px;"> Some examples of accessibility that can be found in websites is the ability to add a screen-reader to your website so people who have trouble seeing can still get information from their favorite website without having much trouble. Many devices such as Window's laptops or MacBook's have the ability to read the information present on the screen to the user, granted that screen-reader technology is implemented. </h2>
-					<h2 style="font-size: 20px;">Another example of accssibility is the ability to make the website have good design and amazing contrast. Websites that have good contrast allow for the text that is present on the screen to be easily read. Good design allows the website to be easily navigated through without causing too much trouble to the user. </h2>
+					<h2 style="font-size: 20px;"> Some examples of Universal Design that can be found in websites is the ability to add a screen-reader to your website so people who have trouble seeing can still get information from their favorite website without having much trouble. Many devices such as Window's laptops or MacBook's have the ability to read the information present on the screen to the user, granted that screen-reader technology is implemented. </h2>
+					<h2 style="font-size: 20px;">Another example of Universal Design is the ability to make the website have good design and amazing contrast. Websites that have good contrast allow for the text that is present on the screen to be easily read. Good design allows the website to be easily navigated through without causing too much trouble to the user. </h2>
 					<h2 style="font-size: 20px;">You can look on the other tabs to get more information about what Universal Design is.</h2>
 				</div>
 			</div>
@@ -151,6 +152,7 @@
 					<h2 style="font-size: 20px;">Tolerance for Error</h2>
 					<h2 style="font-size: 20px;">Low Physical Effort</h2>
 					<h2 style="font-size: 20px;">Size and Space for Approach and Use</h2>
+					<img src="../CSCI3150_Final/img/Universal-Design.jpg" alt="image of the seven design Principles of universal design" style="width: 350px; margin-left: 25px; margin-bottom: 20px;">
 				</div>
 			</div>
 		</aside>
@@ -158,14 +160,14 @@
 			<button class="start-button">Start</button>
 
 			<div class="taskbar-items">
-				<a href="https://www.nngroup.com/articles/ten-usability-heuristics/">
-					<button class="source-button" style="margin-right: 10px;">Norman's Heuristics</button>
+				<a href="https://www.nngroup.com/articles/ten-usability-heuristics/" style="margin-right: 15px; color: black; margin-left: 10px;">
+					Norman's Heuristics
 				</a>
-				<a href="https://universaldesign.ie/about-universal-design/the-7-principles#:~:text=The%207%20Principles%20of%20Universal,the%20North%20Carolina%20State%20University.">
-					<button class="source-button">Center for Universal Design</button>
+				<a href="https://universaldesign.ie/about-universal-design/the-7-principles#:~:text=The%207%20Principles%20of%20Universal,the%20North%20Carolina%20State%20University." style="color: black;">
+					Center for Universal Design
 				</a>
 			</div>
-			<div class="system-time">
+			<div class="system-time" aria-live="assertive" role="timer" aria-atomic="true">
 				<span id="system-time" style="color: black;">12:00 PM</span>
 			  </div>
 		</footer>

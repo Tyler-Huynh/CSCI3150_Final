@@ -16,7 +16,7 @@
 	<h1 style="display: none;"> Main Content</h1>
 	<header>
 		<div class="title-bar">
-			<nav class="navbar navbar-expand-md navbar-dark">
+			<nav class="navbar navbar-expand-md navbar-dark" aria-label="navigation">
 				<h1 style="display: none;"> Main Nav</h1>
 				<a class="navbar-brand" href="../CSCI3150_Final/index.html" style="margin-left: 10px;" >Importance of Universal Design</a>
 				<button class="navbar-toggler"  data-toggle="collapse" data-target="#collapsibleNavbar" aria-label="Nav button">
@@ -32,8 +32,9 @@
 				<button id="muteButton" onclick="toggleMute()" style="font-size: 15px;">Unmute</button>
 			  </nav>
 			  <audio id="myAudio" autoplay>
-				<source src="../CSCI3150_Final/img/Trance-009SoundSystemDreamscape(HD).mp3" type="audio/mp3">
+				<source src="../CSCI3150_Final/img/CameronsWorlddub.mp3" type="audio/mp3">
 				Your browser does not support the audio tag.
+				<h1 style="display: none;">Music copyrights to Blordow on SoundCloud, Pilotredsun on Soundcloud, and Robin Power on SoundCloud </h1>
 			</audio>
 			<div class="title-bar-controls">
 				<button aria-label="Close" style="margin-bottom: 50px;"></button>
@@ -45,9 +46,9 @@
 
 		document.addEventListener("DOMContentLoaded", function (){
 			const songs = [
-                '/CSCI3150_Final/img/Trance-009SoundSystemDreamscape(HD).mp3',
-                '/CSCI3150_Final/img/009SoundSystemWithASpiritOFFICIALHD.mp3',
-                'https://example.com/song3.mp3',
+				'/CSCI3150_Final/img/JermaSleepingPlanets.mp3',
+				'/CSCI3150_Final/img/Pilotredsun-FleeceSnowkbs.mp3',
+				'/CSCI3150_Final/img/CameronsWorlddub.mp3',
             ];
 
             // Get a random index to select a song
@@ -91,6 +92,36 @@
 				<div class="content">
 					<h2 style="font-size: 20px;"> We can help implement and make Universal Design more widely known by just simply talking about it and implementing it into various designs that we do. </h2>
 					<h2 style="font-size: 20px;"> By doing this we can allow for Universal Design to take a stronger hold in more site and aspects of design. </h2>
+
+				</div>
+			</div>
+
+			<div class="window" style="margin-right: 10px; margin-bottom: 90px; margin-top: 20px;">
+				<div class="title-bar">
+					<div class="title-bar-text">
+						<h1 style="font-size: 25px;">
+							Different Tools For Universal Design
+						</h1>
+						
+					</div>
+					<div class="title-bar-controls" style="margin-bottom: 30px;">
+						<button aria-label="Minimize"></button>
+						<button aria-label="Maximize"></button>
+						<button aria-label="Close"></button>
+					</div>
+				</div>
+				<div class="content">
+					<h2 style="font-size: 20px;"> There are many different tools that we can use for Universal Design, specifically in web design, tools such as WAVE, HTML5 Outliner, and W3C HTML Validator. Below will be a brief decription of them: </h2>
+					<h2 style="font-size: 20px; margin-top: 20px; font-weight: bold;" > WAVE:</h2>
+					<p style="font-size: 20px;"> WAVE is a tool used to check a website for various errors, such as contrast errors or general accessibility errors. It also lists out the structure of the page and gives a view of the overall layout. </p>
+					<img src="../CSCI3150_Final/img/WAVE.jpg" alt="image of the logo of WAVE Evaluation tool" style="width: 300px; margin-left: 50px;">
+					<h2 style="font-size: 20px; margin-top: 20px; font-weight: bold;" > HTML 5 Outliner:</h2>
+					<p style="font-size: 20px;"> The HTML5 Outliner is a Google extension that can see the structure of the page as well as list out if there are any untitled sections of your page, this allows for you to name all your sections properly. </p>
+					<img src="../CSCI3150_Final/img/html5.JPG" alt="image of the HTML 5 Outliner in affect on my website" style="width: 300px; margin-left: 50px;">
+					<h2 style="font-size: 20px; margin-top: 20px; font-weight: bold;" > W3C HTML Validator:</h2>
+					<p style="font-size: 20px;"> The W3C HTML Validator will check your site for any and all issues, such as having empty links or errors in your HTML that your IDE might not catch. Fixing your errors will allow for you website to have a more cohesive and clear structure. </p>
+					<img src="../CSCI3150_Final/img/valid.jpg" alt="image of the HTML Validator validating a website and showing various errors" style="width: 300px; margin-left: 50px; margin-bottom: 20px;">
+
 
 				</div>
 			</div>
@@ -196,7 +227,7 @@
 			<button class="start-button">Start</button>
 
 			
-			<div class="system-time">
+			<div class="system-time" aria-live="assertive" role="timer" aria-atomic="true">
 				<span id="system-time" style="color: black;">12:00 PM</span>
 			  </div>
 		</footer>

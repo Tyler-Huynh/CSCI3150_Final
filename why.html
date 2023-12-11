@@ -18,7 +18,7 @@
 	<h1 style="display: none;"> Main Content</h1>
 	<header>
 		<div class="title-bar">
-			<nav class="navbar navbar-expand-md navbar-dark">
+			<nav class="navbar navbar-expand-md navbar-dark" aria-label="navigation">
 				<h1 style="display: none;"> Main Nav</h1>
 				<a class="navbar-brand" href="../CSCI3150_Final/index.html" style="margin-left: 10px;" >Importance of Universal Design</a>
 				<button class="navbar-toggler"  data-toggle="collapse" data-target="#collapsibleNavbar" aria-label="Nav button">
@@ -34,8 +34,9 @@
 				<button id="muteButton" onclick="toggleMute()" style="font-size: 15px;">Unmute</button>
 			  </nav>
 			  <audio id="myAudio" autoplay>
-				<source src="../CSCI3150_Final/img/Trance-009SoundSystemDreamscape(HD).mp3" type="audio/mp3">
+				<source src="../CSCI3150_Final/img/CameronsWorlddub.mp3" type="audio/mp3">
 				Your browser does not support the audio tag.
+				<h1 style="display: none;">Music copyrights to Blordow on SoundCloud, Pilotredsun on Soundcloud, and Robin Power on SoundCloud </h1>
 			</audio>
 			<div class="title-bar-controls">
 				<button aria-label="Close" style="margin-bottom: 50px;"></button>
@@ -47,9 +48,9 @@
 
 		document.addEventListener("DOMContentLoaded", function (){
 			const songs = [
-                '/CSCI3150_Final/img/Trance-009SoundSystemDreamscape(HD).mp3',
-                '/CSCI3150_Final/img/009SoundSystemWithASpiritOFFICIALHD.mp3',
-                'https://example.com/song3.mp3',
+                '/CSCI3150_Final/img/JermaSleepingPlanets.mp3',
+				'/CSCI3150_Final/img/Pilotredsun-FleeceSnowkbs.mp3',
+				'/CSCI3150_Final/img/CameronsWorlddub.mp3',
             ];
 
             // Get a random index to select a song
@@ -60,7 +61,7 @@
             myAudio.src = songs[randomIndex];
 		});
 		var audio = document.getElementById('myAudio'); 
-		audio.volume = 0.010;
+		audio.volume = 0.025;
 
 		function toggleMute() {
 			if (myAudio.muted) {
@@ -77,7 +78,7 @@
 			
 		</main>
 		<aside class="left-col" id="left-col">
-			<div class="window" style="margin-right: 50px;">
+			<div class="window" style="margin-top: 30px;">
 				<div class="title-bar">
 					<div class="title-bar-text">
 						<h1 style="font-size: 25px;">
@@ -92,11 +93,12 @@
 					</div>
 				</div>
 				<div class="content">
-					<h2 style="font-size: 20px;"> Universal Design is important because it allows for us to promote inclusivity when designing websites and other things that people use everyday. There are many aspects of Universal Design that are implemented to accomadate everyone regardless of what disability they may have, whether it be there age, size, or disability. Universal Design is here to allow for everyone the ability to live life as they see fit.  </h2>
+					<h2 style="font-size: 20px;"> Universal Design is important because it allows for us to promote inclusivity when designing websites and other things that people use everyday. </h2>
+					<h2 style="font-size: 20px;"> There are many aspects of Universal Design that are implemented to accomadate everyone regardless of what disability they may have, whether it be there age, size, or disability. Universal Design is here to allow for everyone the ability to live life as they see fit.  </h2>
 					<h2 style="font-size: 20px;"> There are many reasons as to why implementing Universal Design benefits us all, some of them are below! </h2>
 				</div>
 			</div>
-			<div class="window" style="margin-right: 50px; margin-top: 20px;">
+			<div class="window" style="margin-top: 20px;">
 				<div class="title-bar">
 					<div class="title-bar-text">
 						<h1 style="font-size: 25px;">
@@ -114,7 +116,7 @@
 					<h2 style="font-size: 20px;">Universal Design allows for less of a need when retrofitting a website to allow for inclusivity, thus making the decision to make the site inclusive allows for cost-effectiveness. </h2>	
 				</div>
 			</div>
-			<div class="window" style="margin-right: 50px; margin-top: 20px;">
+			<div class="window" style="margin-top: 20px;">
 				<div class="title-bar">
 					<div class="title-bar-text">
 						<h1 style="font-size: 25px;">
@@ -129,13 +131,30 @@
 					</div>
 				</div>
 				<div class="content">
-					<h2 style="font-size: 20px;">Universal Design allows for people of all abilities to have equal access and ease of use to innovative technologies and devices. </h2>	
+					<h2 style="font-size: 20px;">Universal Design allows for people of all abilities to have equal access and ease of use to innovative technologies and devices. This benefits everyone from a mother pushing her cradle through a street, to a blind man reading about his favorite recipe. </h2>	
 				</div>
 			</div>
-
 		</aside>
 		<aside class="right-col" id="right-col">
-			<div class="window" style="margin-bottom: 70px; margin-top: 20px;">
+			<div class="window" style="margin-top: 30px;">
+				<div class="title-bar">
+					<div class="title-bar-text">
+						<h1 style="font-size: 25px;">
+							Benefits a Wide Array of Learning Abilities
+						</h1>
+						
+					</div>
+					<div class="title-bar-controls" style="margin-bottom: 30px;">
+						<button aria-label="Minimize"></button>
+						<button aria-label="Maximize"></button>
+						<button aria-label="Close"></button>
+					</div>
+				</div>
+				<div class="content">
+					<h2 style="font-size: 20px;">Universal Design allows for a large range of people with varying levels of learning styles, preferences, and abilities to be able to use everything as long as we as designers implement it.</h2>	
+				</div>
+			</div>
+			<div class="window" style=" margin-top: 20px; margin-bottom: 90px;">
 				<div class="title-bar">
 					<div class="title-bar-text">
 						<h1 style="font-size: 25px;">
@@ -161,11 +180,14 @@
 			<button class="start-button">Start</button>
 
 			<div class="taskbar-items">
-				<a href="https://www.who.int/news-room/fact-sheets/detail/disability-and-health#:~:text=An%20estimated%201.3%20billion%20people%20%E2%80%93%20or%2016%25%20of%20the%20global,diseases%20and%20people%20living%20longer.">
-					<button class="source-button" style="margin-left: 10px;">WHO</button>
+				<a href="https://www.who.int/news-room/fact-sheets/detail/disability-and-health#:~:text=An%20estimated%201.3%20billion%20people%20%E2%80%93%20or%2016%25%20of%20the%20global,diseases%20and%20people%20living%20longer." style="margin-right: 10px; color: black; margin-left: 10px;">
+					World Health Org
+				</a>
+				<a href="https://www.buffalo.edu/access/help-and-support/topic3.html" style="color: black;">
+					University of Buffalo
 				</a>
 			</div>
-			<div class="system-time">
+			<div class="system-time" aria-live="assertive" role="timer" aria-atomic="true">
 				<span id="system-time" style="color: black;">12:00 PM</span>
 			  </div>
 		</footer>

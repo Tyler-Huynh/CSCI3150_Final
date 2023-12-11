@@ -19,7 +19,7 @@
 	<h1 style="display: none;"> Main Content</h1>
 	<header>
 		<div class="title-bar">
-			<nav class="navbar navbar-expand-md navbar-dark">
+			<nav class="navbar navbar-expand-md navbar-dark" aria-label="navigation">
 				<h1 style="display: none;"> Main Nav</h1>
 				<a class="navbar-brand" href="../CSCI3150_Final/index.html" style="margin-left: 10px;" >Importance of Universal Design</a>
 				<button class="navbar-toggler"  data-toggle="collapse" data-target="#collapsibleNavbar" aria-label="Nav button">
@@ -35,7 +35,9 @@
 				<button id="muteButton" onclick="toggleMute()" style="font-size: 15px;">Unmute</button>
 			  </nav>
 			  <audio id="myAudio" autoplay>
+				<source src="../CSCI3150_Final/img/CameronsWorlddub.mp3" type="audio/mp3">
 				Your browser does not support the audio tag.
+				<h1 style="display: none;">Music copyrights to Blordow on SoundCloud, Pilotredsun on Soundcloud, and Robin Power on SoundCloud </h1>
 			</audio>
 			<div class="title-bar-controls">
 				<button aria-label="Close" style="margin-bottom: 50px;"></button>
@@ -47,9 +49,9 @@
 
 		document.addEventListener("DOMContentLoaded", function (){
 			const songs = [
-                '/CSCI3150_Final/img/Trance-009SoundSystemDreamscape(HD).mp3',
-                '/CSCI3150_Final/img/009SoundSystemWithASpiritOFFICIALHD.mp3',
-                'https://example.com/song3.mp3',
+				'/CSCI3150_Final/img/JermaSleepingPlanets.mp3',
+				'/CSCI3150_Final/img/Pilotredsun-FleeceSnowkbs.mp3',
+				'/CSCI3150_Final/img/CameronsWorlddub.mp3',
             ];
 
             // Get a random index to select a song
@@ -78,7 +80,7 @@
 		<main class="main">
 		</main>
 		<aside class="left-col" id="left-col">
-			<div class="window">
+			<div class="window" style="margin-top: 30px;">
 				<div class="title-bar">
 					<div class="title-bar-text">
 						<h1 style="font-size: 25px;">
@@ -97,12 +99,37 @@
 					<h2 style="font-size: 20px;">On the other pages of the site will be information to provide more context on Universal Design and how we as a society can benefit from the implementation and maintenance of it. </h2>
 				</div>
 			</div>
+
+			<div class="window" style="margin-top: 20px; ">
+				<div class="title-bar">
+					<div class="title-bar-text">
+						<h1 style="font-size: 25px;">
+							Modern Universal Design
+						</h1>
+						
+					</div>
+					<div class="title-bar-controls" style="margin-bottom: 30px;">
+						<button aria-label="Minimize"></button>
+						<button aria-label="Maximize"></button>
+						<button aria-label="Close"></button>
+					</div>
+				</div>
+				<div class="content">
+					<h2 style="font-size: 20px;"> Modern Universal Design holds a special place with the ADA National Network who defines Universal Design as "inclusive design" and "design for all". Thanks to the help of Ronald Mace and Selwyn Goldsmith who pioneered Universal Design and made it more widely known. They helped implement certain Universal Design features listed below: </h2>
+					<p style="font-size: 20px;"> Implementing curb cuts or sidewalk ramps within sidewalks that was orginaally used by people with wheelchairs, that are now widely used by all people. </p>
+					<p style="font-size: 20px;"> Implementing automatic door openers that were originally used by those who could not open the door easily, but now used by all people. </p>
+					<p style="font-size: 20px;"> Adding captions to media, for people who were hearing impaired, but now used by all people regardless of whether they have hearing disabilities. </p>
+					<img src="../CSCI3150_Final/img/families-with-curb-cut-smaller-paint.jpg" alt="image of a family crossing a street about to enter a curb cut in the sidewalk" style="width: 300px; margin-left: 48px; margin-bottom: 20px;">
+
+
+				</div>
+			</div>
 			
 			
 
 		</aside>
 		<aside class="right-col" id="right-col">
-			<div class="window">
+			<div class="window" style="margin-top: 30px; margin-bottom: 90px;">
 				<div class="title-bar">
 					<div class="title-bar-text">
 						<h1 style="font-size: 25px;">
@@ -129,11 +156,11 @@
 			<button class="start-button">Start</button>
 
 			<div class="taskbar-items">
-				<a href="https://rockymountainada.org/news/blog/evolution-universal-design-win-win-concept-all#:~:text=Universal%20Design%20is%20a%20term,philosophy%20of%20barrier%20free%20design.">
-					<button class="source-button">Source</button>
+				<a href="https://rockymountainada.org/news/blog/evolution-universal-design-win-win-concept-all#:~:text=Universal%20Design%20is%20a%20term,philosophy%20of%20barrier%20free%20design." style="color: black;">
+					Rocky Mountain Ada
 				</a>
 			</div>
-			<div class="system-time">
+			<div class="system-time" aria-live="assertive" role="timer" aria-atomic="true">
 				<span id="system-time" style="color: black;">12:00 PM</span>
 			  </div>
 		</footer>
