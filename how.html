@@ -44,7 +44,7 @@
 
 			<script>
 				// Get the audio or video element
-				var mediaElement = document.getElementById('myAudio'); // Replace 'yourMediaElementId' with the actual ID of your audio/video element
+				var mediaElement = document.getElementById('myAudio'); 
 		
 				// Function to toggle mute/unmute
 				function toggleMute() {
@@ -56,6 +56,9 @@
 						document.getElementById('muteButton').innerText = 'Unmute';
 					}
 				}
+
+				var audio = document.getElementById("myAudio");
+  				audio.volume = 0.010;
 
 				function toggleNavbar() {
 					var navbar = document.getElementById("myNavbar");
@@ -78,7 +81,7 @@
 						</h1>
 						
 					</div>
-					<div class="title-bar-controls">
+					<div class="title-bar-controls" style="margin-bottom: 30px;">
 						<button aria-label="Minimize"></button>
 						<button aria-label="Maximize"></button>
 						<button aria-label="Close"></button>
@@ -101,7 +104,7 @@
 						</h1>
 						
 					</div>
-					<div class="title-bar-controls">
+					<div class="title-bar-controls" style="margin-bottom: 30px;">
 						<button aria-label="Minimize"></button>
 						<button aria-label="Maximize"></button>
 						<button aria-label="Close"></button>
@@ -120,7 +123,7 @@
 						</h1>
 						
 					</div>
-					<div class="title-bar-controls">
+					<div class="title-bar-controls" style="margin-bottom: 30px;">
 						<button aria-label="Minimize"></button>
 						<button aria-label="Maximize"></button>
 						<button aria-label="Close"></button>
@@ -138,7 +141,7 @@
 						</h1>
 						
 					</div>
-					<div class="title-bar-controls">
+					<div class="title-bar-controls" style="margin-bottom: 50px;">
 						<button aria-label="Minimize"></button>
 						<button aria-label="Maximize"></button>
 						<button aria-label="Close"></button>
@@ -156,7 +159,7 @@
 						</h1>
 						
 					</div>
-					<div class="title-bar-controls">
+					<div class="title-bar-controls" style="margin-bottom: 30px;">
 						<button aria-label="Minimize"></button>
 						<button aria-label="Maximize"></button>
 						<button aria-label="Close"></button>
@@ -176,7 +179,7 @@
 						</h1>
 						
 					</div>
-					<div class="title-bar-controls">
+					<div class="title-bar-controls" style="margin-bottom: 30px;">
 						<button aria-label="Minimize"></button>
 						<button aria-label="Maximize"></button>
 						<button aria-label="Close"></button>

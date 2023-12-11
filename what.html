@@ -42,7 +42,7 @@
 	</header>
 	<script>
 		// Get the audio or video element
-		var mediaElement = document.getElementById('myAudio'); // Replace 'yourMediaElementId' with the actual ID of your audio/video element
+		var mediaElement = document.getElementById('myAudio'); 
 
 		// Function to toggle mute/unmute
 		function toggleMute() {
@@ -54,6 +54,9 @@
 				document.getElementById('muteButton').innerText = 'Unmute';
 			}
 		}
+
+		var audio = document.getElementById("myAudio");
+  		audio.volume = 0.010;
 
 		function toggleNavbar() {
 			var navbar = document.getElementById("myNavbar");
@@ -77,7 +80,7 @@
 						</h1>
 						
 					</div>
-					<div class="title-bar-controls">
+					<div class="title-bar-controls" style="margin-bottom: 30px;">
 						<button aria-label="Minimize"></button>
 						<button aria-label="Maximize"></button>
 						<button aria-label="Close"></button>
@@ -87,7 +90,6 @@
 					<h2 style="font-size: 20px;"> Universal Design is the ability to make most if not all features of your website or any other design accessible for people with disabilities to be able to use. </h2>
 					<h2 style="font-size: 20px;"> Some examples of accessibility that can be found in websites is the ability to add a screen-reader to your website so people who have trouble seeing can still get information from their favorite website without having much trouble. Many devices such as Window's laptops or MacBook's have the ability to read the information present on the screen to the user, granted that screen-reader technology is implemented. </h2>
 					<h2 style="font-size: 20px;">Another example of accssibility is the ability to make the website have good design and amazing contrast. Websites that have good contrast allow for the text that is present on the screen to be easily read. Good design allows the website to be easily navigated through without causing too much trouble to the user. </h2>
-					<h2 style="font-size: 20px;"></h2>
 					<h2 style="font-size: 20px;">You can look on the other tabs to get more information about what Universal Design is.</h2>
 				</div>
 			</div>
@@ -103,7 +105,7 @@
 						</h1>
 						
 					</div>
-					<div class="title-bar-controls">
+					<div class="title-bar-controls" style="margin-bottom: 30px;">
 						<button aria-label="Minimize"></button>
 						<button aria-label="Maximize"></button>
 						<button aria-label="Close"></button>
@@ -131,7 +133,7 @@
 						</h1>
 						
 					</div>
-					<div class="title-bar-controls">
+					<div class="title-bar-controls" style="margin-bottom: 30px;">
 						<button aria-label="Minimize"></button>
 						<button aria-label="Maximize"></button>
 						<button aria-label="Close"></button>
