@@ -27,15 +27,14 @@
 				</button>
 				<div class="collapse navbar-collapse" id="collapsibleNavbar" style="margin-left: 10px;">
 				  <ul class="navbar-nav">
-					<li class="nav-item"><button><a class="nav-link"  href="../CSCI3150_Final/what.html" style="color: black;">What is Universal Design</a></button></li>
-					<li class="nav-item"><button><a class="nav-link" href="../CSCI3150_Final/why.html" style="color: black;">Why is Universal Design Important</a></button></li>
-					<li class="nav-item"><button><a class="nav-link" href="../CSCI3150_Final/how.html" style="color: black;">How We Can Help</a></button></li>
+					<li class="nav-item"><a class="nav-link"  href="../CSCI3150_Final/what.html" style="color: black; font-size: 15px;"><button> What is Universal Design</button></a></li>
+					<li class="nav-item"><a class="nav-link" href="../CSCI3150_Final/why.html" style="color: black; font-size: 15px;"><button>Why is Universal Design Important</button></a></li>
+					<li class="nav-item"><a class="nav-link" href="../CSCI3150_Final/how.html" style="color: black; font-size: 15px;"><button> How We Can Help</button></a></li>
 				  </ul>
 				</div>
-				<button id="muteButton" onclick="toggleMute()">Unmute</button>
+				<button id="muteButton" onclick="toggleMute()" style="font-size: 15px;">Unmute</button>
 			  </nav>
 			  <audio id="myAudio" autoplay>
-				<source src="../CSCI3150_Final/img/Trance-009SoundSystemDreamscape(HD).mp3" type="audio/mp3">
 				Your browser does not support the audio tag.
 			</audio>
 			<div class="title-bar-controls">
@@ -45,28 +44,31 @@
 	</header>
 	<script>
 		// Get the audio or video element
-		var mediaElement = document.getElementById('myAudio'); 
 
-		// Function to toggle mute/unmute
+		document.addEventListener("DOMContentLoaded", function (){
+			const songs = [
+                '/CSCI3150_Final/img/Trance-009SoundSystemDreamscape(HD).mp3',
+                '/CSCI3150_Final/img/009SoundSystemWithASpiritOFFICIALHD.mp3',
+                'https://example.com/song3.mp3',
+            ];
+
+            // Get a random index to select a song
+            const randomIndex = Math.floor(Math.random() * songs.length);
+
+            // Set the source of the audio player to the randomly selected song
+            const myAudio = document.getElementById('myAudio');
+            myAudio.src = songs[randomIndex];
+		});
+		var audio = document.getElementById('myAudio'); 
+		audio.volume = 0.010;
+
 		function toggleMute() {
-			if (mediaElement.muted) {
-				mediaElement.muted = false;
+			if (myAudio.muted) {
+				myAudio.muted = false;
 				document.getElementById('muteButton').innerText = 'Mute';
 			} else {
-				mediaElement.muted = true;
+				myAudio.muted = true;
 				document.getElementById('muteButton').innerText = 'Unmute';
-			}
-		}
-
-		var audio = document.getElementById("myAudio");
-  		audio.volume = 0.010;
-
-		function toggleNavbar() {
-			var navbar = document.getElementById("myNavbar");
-			if (navbar.className === "navbar") {
-				navbar.className += " responsive";
-			} else {
-				navbar.className = "navbar";
 			}
 		}
 	</script>
@@ -123,9 +125,39 @@
 				</div>
 			</div>
 		</aside>
-		<footer>
-	
+		<footer class="taskbar">
+			<button class="start-button">Start</button>
+
+			<div class="taskbar-items">
+				<a href="https://rockymountainada.org/news/blog/evolution-universal-design-win-win-concept-all#:~:text=Universal%20Design%20is%20a%20term,philosophy%20of%20barrier%20free%20design.">
+					<button class="source-button">Source</button>
+				</a>
+			</div>
+			<div class="system-time">
+				<span id="system-time" style="color: black;">12:00 PM</span>
+			  </div>
 		</footer>
+		<script>
+			function updateSystemTime() {
+			  const systemTimeElement = document.getElementById('system-time');
+			  const currentTime = new Date();
+			  const hours = currentTime.getHours();
+			  const minutes = currentTime.getMinutes();
+			  const ampm = hours >= 12 ? 'PM' : 'AM';
+		
+			  const formattedHours = hours % 12 === 0 ? 12 : hours % 12;
+			  const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+		
+			  const formattedTime = `${formattedHours}:${formattedMinutes} ${ampm}`;
+			  systemTimeElement.textContent = formattedTime;
+			}
+		
+			// Update system time every second
+			setInterval(updateSystemTime, 1000);
+		
+			// Initial update
+			updateSystemTime();
+		  </script>
 	</div>
 </body>
 </html>

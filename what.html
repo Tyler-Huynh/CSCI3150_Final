@@ -24,12 +24,12 @@
 				</button>
 				<div class="collapse navbar-collapse" id="collapsibleNavbar" style="margin-left: 10px;">
 				  <ul class="navbar-nav">
-					<li class="nav-item"><button><a class="nav-link"  href="../CSCI3150_Final/what.html" style="color: black;">What is Universal Design</a></button></li>
-					<li class="nav-item"><button><a class="nav-link" href="../CSCI3150_Final/why.html" style="color: black;">Why is Universal Design Important</a></button></li>
-					<li class="nav-item"><button><a class="nav-link" href="../CSCI3150_Final/how.html" style="color: black;">How We Can Help</a></button></li>
+					<li class="nav-item"><a class="nav-link"  href="../CSCI3150_Final/what.html" style="color: black; font-size: 15px;"><button> What is Universal Design</button></a></li>
+					<li class="nav-item"><a class="nav-link" href="../CSCI3150_Final/why.html" style="color: black; font-size: 15px;"><button>Why is Universal Design Important</button></a></li>
+					<li class="nav-item"><a class="nav-link" href="../CSCI3150_Final/how.html" style="color: black; font-size: 15px;"><button> How We Can Help</button></a></li>
 				  </ul>
 				</div>
-				<button id="muteButton" onclick="toggleMute()">Unmute</button>
+				<button id="muteButton" onclick="toggleMute()" style="font-size: 15px;">Unmute</button>
 			  </nav>
 			  <audio id="myAudio" autoplay>
 				<source src="../CSCI3150_Final/img/Trance-009SoundSystemDreamscape(HD).mp3" type="audio/mp3">
@@ -42,28 +42,31 @@
 	</header>
 	<script>
 		// Get the audio or video element
-		var mediaElement = document.getElementById('myAudio'); 
 
-		// Function to toggle mute/unmute
+		document.addEventListener("DOMContentLoaded", function (){
+			const songs = [
+                '/CSCI3150_Final/img/Trance-009SoundSystemDreamscape(HD).mp3',
+                '/CSCI3150_Final/img/009SoundSystemWithASpiritOFFICIALHD.mp3',
+                'https://example.com/song3.mp3',
+            ];
+
+            // Get a random index to select a song
+            const randomIndex = Math.floor(Math.random() * songs.length);
+
+            // Set the source of the audio player to the randomly selected song
+            const myAudio = document.getElementById('myAudio');
+            myAudio.src = songs[randomIndex];
+		});
+		var audio = document.getElementById('myAudio'); 
+		audio.volume = 0.010;
+
 		function toggleMute() {
-			if (mediaElement.muted) {
-				mediaElement.muted = false;
+			if (myAudio.muted) {
+				myAudio.muted = false;
 				document.getElementById('muteButton').innerText = 'Mute';
 			} else {
-				mediaElement.muted = true;
+				myAudio.muted = true;
 				document.getElementById('muteButton').innerText = 'Unmute';
-			}
-		}
-
-		var audio = document.getElementById("myAudio");
-  		audio.volume = 0.010;
-
-		function toggleNavbar() {
-			var navbar = document.getElementById("myNavbar");
-			if (navbar.className === "navbar") {
-				navbar.className += " responsive";
-			} else {
-				navbar.className = "navbar";
 			}
 		}
 	</script>
@@ -72,7 +75,7 @@
 			
 		</main>
 		<aside class="left-col" id="left-col">
-			<div class="window" style="margin-right: 20px;">
+			<div class="window" style="margin-right: 20px; margin-top: 30px;">
 				<div class="title-bar">
 					<div class="title-bar-text">
 						<h1 style="font-size: 25px;">
@@ -97,7 +100,7 @@
 		</aside>
 		
 		<aside class="right-col" id="right-col">
-			<div class="window">
+			<div class="window" style="margin-top: 30px;">
 				<div class="title-bar">
 					<div class="title-bar-text">
 						<h1 style="font-size: 25px;">
@@ -125,7 +128,7 @@
 					<h2 style="font-size: 20px;">Help and Documentation</h2>
 				</div>
 			</div>
-			<div class="window" style="margin-top: 20px;">
+			<div class="window" style="margin-top: 20px; margin-bottom: 80px;">
 				<div class="title-bar">
 					<div class="title-bar-text">
 						<h1 style="font-size: 25px;">
@@ -133,7 +136,7 @@
 						</h1>
 						
 					</div>
-					<div class="title-bar-controls" style="margin-bottom: 30px;">
+					<div class="title-bar-controls" style="margin-bottom: 80px;">
 						<button aria-label="Minimize"></button>
 						<button aria-label="Maximize"></button>
 						<button aria-label="Close"></button>
@@ -148,14 +151,45 @@
 					<h2 style="font-size: 20px;">Tolerance for Error</h2>
 					<h2 style="font-size: 20px;">Low Physical Effort</h2>
 					<h2 style="font-size: 20px;">Size and Space for Approach and Use</h2>
-
-					
 				</div>
 			</div>
 		</aside>
-		<footer>
-	
+		<footer class="taskbar">
+			<button class="start-button">Start</button>
+
+			<div class="taskbar-items">
+				<a href="https://www.nngroup.com/articles/ten-usability-heuristics/">
+					<button class="source-button" style="margin-right: 10px;">Norman's Heuristics</button>
+				</a>
+				<a href="https://universaldesign.ie/about-universal-design/the-7-principles#:~:text=The%207%20Principles%20of%20Universal,the%20North%20Carolina%20State%20University.">
+					<button class="source-button">Center for Universal Design</button>
+				</a>
+			</div>
+			<div class="system-time">
+				<span id="system-time" style="color: black;">12:00 PM</span>
+			  </div>
 		</footer>
+		<script>
+			function updateSystemTime() {
+			  const systemTimeElement = document.getElementById('system-time');
+			  const currentTime = new Date();
+			  const hours = currentTime.getHours();
+			  const minutes = currentTime.getMinutes();
+			  const ampm = hours >= 12 ? 'PM' : 'AM';
+		
+			  const formattedHours = hours % 12 === 0 ? 12 : hours % 12;
+			  const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+		
+			  const formattedTime = `${formattedHours}:${formattedMinutes} ${ampm}`;
+			  systemTimeElement.textContent = formattedTime;
+			}
+		
+			// Update system time every second
+			setInterval(updateSystemTime, 1000);
+		
+			// Initial update
+			updateSystemTime();
+		  </script>
 	</div>
 </body>
 </html>

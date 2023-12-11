@@ -30,7 +30,8 @@ body {
 
   
 .navbar-toggler {
-border-color: #fff;
+background: silver;
+box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
 }
 .navbar-nav .nav-item {
 margin-right: 5px;
@@ -53,8 +54,50 @@ header{
 
 footer{
     grid-area: footer;
-
 }
+
+
+.taskbar {
+    background-color: silver;
+    color: white;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+
+    height: 50px;
+  }
+  
+  .start-button {
+    background-color: silver;
+    color: black;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .source-button{
+    background-color: silver;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  
+  .taskbar-items {
+    display: flex;
+  }
+  
+  .taskbar-items span {
+    margin-right: 15px;
+    cursor: pointer;
+    color: black;
+  }
 
 #right-col{
     grid-area: right-col;
